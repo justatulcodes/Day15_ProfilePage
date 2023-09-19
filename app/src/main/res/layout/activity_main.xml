@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_280sdp"
+        android:contentDescription="@string/header_image"
+        android:tint="@color/translucent_black"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header_img"
+        tools:ignore="UseAppTint" />
+
+    <LinearLayout
+        android:layout_width="@dimen/_550sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:orientation="vertical"
+        android:rotation="-12"
+        android:layout_marginTop="@dimen/_200sdp"
+        android:background="@color/white"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:fontFamily="sans-serif-light"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/hugh_jackman"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/actor_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            app:cardBackgroundColor="@color/translucent_white"
+            app:cardCornerRadius="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_text">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Actor"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/producer_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/translucent_white"
+            app:cardCornerRadius="@dimen/_15sdp"
+            app:layout_constraintStart_toEndOf="@id/actor_card"
+            app:layout_constraintTop_toBottomOf="@id/name_text">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Producer"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/ll_experience_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actor_card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="sans-serif"
+                android:text="Movies"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="56"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="sans-serif"
+                android:text="Plays"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="29"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="sans-serif"
+                android:text="Musicals"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="sans-serif-medium"
+                android:text="11"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+
+        </LinearLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginVertical="@dimen/_20sdp"
+            android:elevation="@dimen/_40sdp"
+            android:src="@drawable/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_experience_row" />
+
+
+        <ImageButton
+            android:id="@+id/fab"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/fab_shape"
+            android:contentDescription="@string/add_new_chat"
+            android:src="@drawable/add"
+            app:backgroundTint="@color/primary_gray"
+            app:fabSize="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_experience_row" />
+
+
+        <TableLayout
+            android:id="@+id/tl_follow_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/fab"
+            android:stretchColumns="1, 2"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="@dimen/_6sdp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/followers" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/following" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/_3_5k" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/_25" />
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <com.ms.square.android.expandabletextview.ExpandableTextView
+            android:id="@+id/expand_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            expandableTextView:animDuration="500"
+            expandableTextView:maxCollapsedLines="7"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_80sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"
+            app:layout_constraintBottom_toTopOf="@id/cardView_movies"
+            >
+
+            <!-- simple text view  -->
+            <TextView
+                android:id="@id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="@dimen/_12ssp" />
+
+            <ImageButton
+                android:id="@id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:padding="@dimen/_6sdp"
+                android:background="@android:color/transparent" />
+
+        </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+<!--        <io.github.glailton.expandabletextview.ExpandableTextView-->
+<!--            android:id="@+id/expand_text_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            expandableTextView:collapsedLines="3"-->
+<!--            expandableTextView:animDuration="500"-->
+<!--            expandableTextView:readMoreText="Leia mais"-->
+<!--            expandableTextView:readLessText="Leia menos"-->
+<!--            expandableTextView:textMode="line"-->
+<!--            expandableTextView:isExpanded="true"-->
+<!--            android:text="@string/biography"-->
+<!--            android:layout_marginHorizontal="@dimen/_20sdp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="parent"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/cardView_movies"/>-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_movies"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_margin="@dimen/_15sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/expand_text_view">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/textview_movies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="MOVIES"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/ib_more_options_movies_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:foregroundTint="@color/text_gray"
+                    android:src="@drawable/options"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_movies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_10sdp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textview_movies" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

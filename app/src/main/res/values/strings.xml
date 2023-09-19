@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Day15_ProfilePage</string>
+    <string name="search">Search</string>
+    <string name="header_image">header_image</string>
+    <string name="hugh_jackman">Hugh Jackman</string>
+    <string name="add_new_chat">new\n</string>
+    <string name="biography">Hugh Jackman is an Australian actor, singer, and producer. He is best known for his roles in the X-Men film series, as Wolverine, and in the musical The Boy from Oz, for which he won a Tony Award.\n\nJackman was born in Sydney, Australia, in 1968. He studied drama at the University of Western Australia, and then began his acting career in theater. He made his film debut in 1994, in the Australian film Paperback Hero.</string>
+    <string name="followers">FOLLOWERS</string>
+    <string name="following">FOLLOWING</string>
+    <string name="_3_5k">3.5K</string>
+    <string name="_25">25</string>
+</resources>
